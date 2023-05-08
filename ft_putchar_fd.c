@@ -6,7 +6,13 @@
 /*   By: mavila-r <mavila-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 11:45:15 by mavila-r          #+#    #+#             */
-/*   Updated: 2023/04/27 11:45:36 by mavila-r         ###   ########.fr       */
+/*   Updated: 2023/05/08 09:39:02 by mavila-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
