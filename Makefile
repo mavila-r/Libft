@@ -35,9 +35,13 @@ SOURCE = ft_isalpha.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
 
+SOURCE_BONUS = ft_lstnew_bonus.c\
+			ft_lstadd_front_bonus.c\
+			ft_lstsize_bonus.c\
 
 OBJECTS = $(SOURCE:.c=.o)
 
+OBJECTS_BONUS = $(SOURCE_BONUS:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -55,4 +59,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: re all clean fclean
+bonus: $(OBJECTS_BONUS) $(OBJECTS)
+		ar -rcs $(NAME) $(OBJECTS) $(OBJECTS_BONUS)
+
+.PHONY: re all clean fclean bonus
