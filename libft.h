@@ -6,7 +6,7 @@
 /*   By: mavila-r <mavila-r@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 12:53:30 by mavila-r          #+#    #+#             */
-/*   Updated: 2023/05/11 12:16:18 by mavila-r         ###   ########.fr       */
+/*   Updated: 2023/05/11 13:36:53 by mavila-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,7 @@ typedef struct s_list
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
